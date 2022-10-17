@@ -5,9 +5,7 @@ function ContainerLogin({ children }) {
     <div className="w-full h-screen bg-slate-200">
       <div className="navbar bg-sosmed-primary-color">
         <div className="flex-1">
-          <a className="btn btn-ghost normal-case text-xl text-white">
-            Sosmed Apps
-          </a>
+          <a className="btn btn-ghost normal-case text-xl text-white">Sosmed Apps</a>
         </div>
         <div className="flex-none gap-5">
           <div className="dropdown dropdown-end">
@@ -18,7 +16,7 @@ function ContainerLogin({ children }) {
               <div className="indicator ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
+                  // fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={1}
                   stroke="transparent"
@@ -42,9 +40,7 @@ function ContainerLogin({ children }) {
               className="mt-1 card card-compact dropdown-content w-72 bg-white shadow-lg overflow-auto"
             >
               <div className="card-body">
-                <span className="font-bold text-lg text-sosmed-primary-color">
-                  Notification
-                </span>
+                <span className="font-bold text-lg text-sosmed-primary-color">Notification</span>
                 <span className=" w-full text-sosmed-primary-color space-y-2">
                   <p>
                     <strong>Username</strong> telah mengomentari postingan anda
@@ -93,7 +89,7 @@ function ContainerLogin({ children }) {
           </div>
         </div>
       </div>
-      <div>{children}</div>
+      <div className="overflow-auto">{children}</div>
     </div>
   );
 }
