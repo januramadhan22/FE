@@ -1,13 +1,13 @@
 import React from "react";
 
-function Card(props) {
+function PostCard(props) {
   return (
-    <div className="h-screen ">
-      <div className="flex bg-white shadow-lg rounded-md mx-4 md:mx-auto my-56 max-w-md md:max-w-2xl ">
+    <div className="w-full h-full flex justify-center mb-8 ">
+      <div className="flex bg-white shadow-lg rounded-md w-2/4 h-auto">
         <div className="flex items-start px-4 py-6">
           <img
             className="w-12 h-12 rounded-full object-cover mr-4 shadow"
-            src="https://images.unsplash.com/photo-1542156822-6924d1a71ace?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+            src="https://placeimg.com/80/80/people"
             alt="avatar"
           />
           <div className="">
@@ -44,7 +44,7 @@ function Card(props) {
             <div className="flex items-start pt-4">
               <img
                 className="w-12 h-12 rounded-full object-cover mr-4 shadow"
-                src="https://images.unsplash.com/photo-1542156822-6924d1a71ace?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                src="https://placeimg.com/80/80/people"
                 alt="avatar"
               />
               <div className=" pb-3">
@@ -62,7 +62,7 @@ function Card(props) {
             <div className="flex items-start pt-8">
               <img
                 className="w-12 h-12 rounded-full object-cover mr-4 shadow"
-                src="https://images.unsplash.com/photo-1542156822-6924d1a71ace?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                src="https://placeimg.com/80/80/people"
                 alt="avatar"
               />
               <div className=" pb-3">
@@ -95,4 +95,90 @@ function Card(props) {
   );
 }
 
-export default Card;
+function FormPost(props) {
+  return (
+    <div className="w-full h-auto flex justify-center mb-8">
+      <div className="flex bg-white shadow-lg rounded-md w-2/4 h-16">
+        <div className="w-full h-full flex items-center px-4 py-3">
+          <img
+            className="w-12 h-12 rounded-full object-cover mr-4 shadow"
+            src="https://placeimg.com/80/80/people"
+            alt="avatar"
+          />
+          <label
+            htmlFor="my-modal-4"
+            className="w-full h-full flex items-center p-2 rounded-lg bg-background-color cursor-pointer"
+          >
+            Sampaikan Sesuatu . . .
+          </label>
+          <input type="checkbox" id="my-modal-4" className="modal-toggle" />
+          <label htmlFor="my-modal-4" className="modal">
+            <label
+              className="modal-box relative flex bg-white shadow-lg"
+              for=""
+            >
+              <label
+                htmlFor="my-modal-4"
+                className="btn btn-sm btn-circle bg-transparent border-none text-sosmed-primary-color-dark text-lg font-bold hover:bg-white hover:text-sosmed-secondary-color absolute right-2 top-2"
+              >
+                ✕
+              </label>
+              <img
+                className="w-12 h-12 rounded-full object-cover mr-4 shadow"
+                src="https://placeimg.com/80/80/people"
+                alt="avatar"
+              />
+              <div className="w-full space-y-4">
+                <h3 className="text-lg font-bold text-black">Stenly Adams</h3>
+                <input
+                  type="text"
+                  placeholder="Ketikan sesuatu . . ."
+                  className="w-11/12 h-auto px-3 pt-3 pb-72 rounded-lg bg-background-color hover:outline-none focus:outline-none text-black"
+                />
+                <div className="w-11/12 pl-3 flex gap-2">
+                  <button>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={2}
+                      stroke="#219EBC"
+                      className="w-8 h-8"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+                      />
+                    </svg>
+                  </button>
+                  <button>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={2}
+                      stroke="#219EBC"
+                      className="w-8 h-8"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z"
+                      />
+                    </svg>
+                  </button>
+                  <button className="w-full p-2 rounded-br-2xl font-bold text-white border-2 border-sosmed-secondary-color bg-sosmed-secondary-color hover:text-sosmed-secondary-color hover:bg-white">
+                    Share
+                  </button>
+                </div>
+              </div>
+            </label>
+          </label>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export { PostCard, FormPost };

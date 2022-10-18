@@ -1,11 +1,14 @@
 import React from "react";
-import ContainerLogin from "../components/ContainerLogin";
+import { ContainerHome } from "../components/Container";
+import { PostCard, FormPost } from "../components/Card";
 
 function Home() {
   return (
-    <ContainerLogin>
-      <div>Home</div>
-    </ContainerLogin>
+    <ContainerHome>
+      <FormPost />
+      <PostCard />
+      <PostCard />
+    </ContainerHome>
   );
 }
 

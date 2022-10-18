@@ -1,10 +1,11 @@
 import React from "react";
 import { ContainerLogin } from "../components/Container";
+import { PostCard } from "../components/Card";
 
 function SosmedApp() {
   return (
     <ContainerLogin>
-      <div>Login</div>
+      <PostCard />
     </ContainerLogin>
   );
 }
