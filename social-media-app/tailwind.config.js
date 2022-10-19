@@ -9,6 +9,7 @@ module.exports = {
         "sosmed-primary-color-dark": "#031F2E",
         "badge-red": "#E70C0C",
         "comment-field": "#B3B3B3",
+        "focus-border-b": "#219EBC",
       },
     },
   },
