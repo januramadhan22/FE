@@ -15,6 +15,7 @@ module.exports = {
         "background-color": "#E7ECEF",
         "badge-red": "#E70C0C",
         "comment-field": "#B3B3B3",
+        "focus-border-b": "#219EBC",
       },
     },
   },
