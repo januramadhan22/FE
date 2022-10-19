@@ -33,7 +33,6 @@ export default function UserProfile() {
           <Tab.Group>
             <Tab.List
               className={
-
                 "bg-white flex  w-full h-16 text-2xl font-semibold rounded-b-xl text-white"
               }
             >
@@ -43,17 +42,6 @@ export default function UserProfile() {
                 </Tab>
                 <Tab className={"focus:border-b-4 border-focus-border-b  "}>
                   <div className="mt-5">Bio</div>
-
-                "bg-gray-600 flex justify-around w-full h-16 text-4xl mt-8 text-white"
-              }
-            >
-              <div className="flex w-full justify-around">
-                <Tab className={"focus:border-b-4 border-indigo-500 "}>
-                  Posts
-                </Tab>
-                <Tab className={"focus:border-b-4 border-indigo-500 "}>
-                  About Me
-
                 </Tab>
               </div>
             </Tab.List>
