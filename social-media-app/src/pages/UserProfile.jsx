@@ -1,5 +1,5 @@
 import React from "react";
-import Container from "../components/ContainerLogin";
+import { ContainerHome } from "../components/Container";
 import ProfileCard from "../components/ProfileCard";
 import { Tab } from "@headlessui/react";
 import BioCard from "../components/AboutMe";
@@ -7,7 +7,7 @@ import PostsCard from "../components/Card";
 
 export default function UserProfile() {
   return (
-    <Container>
+    <ContainerHome>
       <div className=" w-full flex justify-center md:mt-16 ">
         {/* <div className="bg-zinc-500 w-full md:mx-96 ">
 
@@ -33,6 +33,7 @@ export default function UserProfile() {
           <Tab.Group>
             <Tab.List
               className={
+
                 "bg-white flex  w-full h-16 text-2xl font-semibold rounded-b-xl text-white"
               }
             >
@@ -42,6 +43,17 @@ export default function UserProfile() {
                 </Tab>
                 <Tab className={"focus:border-b-4 border-focus-border-b  "}>
                   <div className="mt-5">Bio</div>
+
+                "bg-gray-600 flex justify-around w-full h-16 text-4xl mt-8 text-white"
+              }
+            >
+              <div className="flex w-full justify-around">
+                <Tab className={"focus:border-b-4 border-indigo-500 "}>
+                  Posts
+                </Tab>
+                <Tab className={"focus:border-b-4 border-indigo-500 "}>
+                  About Me
+
                 </Tab>
               </div>
             </Tab.List>
@@ -59,6 +71,6 @@ export default function UserProfile() {
           </Tab.Group>
         </div>
       </div>
-    </Container>
+    </ContainerHome>
   );
 }
