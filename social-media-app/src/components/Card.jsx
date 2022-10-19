@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 
 function PostCard(props) {
   return (
@@ -268,6 +268,23 @@ function PostCard(props) {
 }
 
 function FormPost(props) {
+  const filepickerRef = useRef(null);
+  const [imagePost, setImagePost] = useState(null);
+
+  const addImagePost = (e) => {
+    const reader = new FileReader();
+    if (e.target.files[0]) {
+      reader.readAsDataURL(e.target.files[0]);
+    }
+    reader.onload = (readerEvent) => {
+      setImagePost(readerEvent.target.result);
+    };
+  };
+
+  const removeImage = () => {
+    setImagePost(null);
+  };
+
   return (
     <div className="w-full h-auto flex justify-center mb-8">
       <div className="flex bg-white shadow-lg rounded-md w-2/4 h-16">
@@ -319,13 +336,35 @@ function FormPost(props) {
 
               <div className="w-full space-y-4">
                 <h3 className="text-lg font-bold text-black">Stenly Adams</h3>
-                <input
-                  type="text"
+                <textarea
+                  name=""
+                  id=""
                   placeholder="Ketikan sesuatu . . ."
-                  className="w-11/12 h-auto px-3 pt-3 pb-72 rounded-lg bg-background-color hover:outline-none focus:outline-none text-black"
-                />
+                  className="w-11/12 h-72 p-3 rounded-lg bg-background-color hover:outline-none focus:outline-none text-black"
+                ></textarea>
+
+                <button type="submit" hidden>
+                  Submit
+                </button>
+                {imagePost && (
+                  <div className="flex">
+                    <div
+                      className="flex flex-col items-center brightness-75 hover:brightness-150 cursor-pointer "
+                      onClick={removeImage}
+                    >
+                      <img
+                        className="h-12 rounded-md object-contain shadow-md shadow-slate-600 bg-transparent 
+                        cursor-pointer"
+                        src={imagePost}
+                        alt=""
+                      />
+                      <p className="font-base text-xs ">remove</p>
+                    </div>
+                  </div>
+                )}
+
                 <div className="w-11/12 pl-3 flex gap-2">
-                  <button>
+                  <button onClick={() => filepickerRef.current.click()}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -340,8 +379,14 @@ function FormPost(props) {
                         d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
                       />
                     </svg>
+                    <input
+                      type="file"
+                      hidden
+                      onChange={addImagePost}
+                      ref={filepickerRef}
+                    />
                   </button>
-                  <button>
+                  <button onClick={() => filepickerRef.current.click()}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
