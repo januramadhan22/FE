@@ -19,8 +19,15 @@ export default function UserProfile() {
                 "bg-white flex  w-full h-16 text-2xl font-semibold rounded-b-xl text-white"
               }
             >
-              <div className="flex w-full justify-center rounded-b-xl" style={{ color: "#219EBC" }}>
-                <Tab className={"focus:border-b-4 border-focus-border-b  md:mr-16 mr-4  "}>
+              <div
+                className="flex w-full justify-center rounded-b-xl"
+                style={{ color: "#219EBC" }}
+              >
+                <Tab
+                  className={
+                    "focus:border-b-4 border-focus-border-b  md:mr-16 mr-4  "
+                  }
+                >
                   <div className="mt-5">Postingan</div>
                 </Tab>
                 <Tab className={"focus:border-b-4 border-focus-border-b  "}>
@@ -31,7 +38,9 @@ export default function UserProfile() {
 
             <Tab.Panels className={"mt-5 h-full"}>
               <Tab.Panel>
+
                 <div className="h-96">
+
                   <PostCard />
                 </div>
               </Tab.Panel>

@@ -9,6 +9,7 @@ function Home() {
         <FormPost />
         <PostCard />
       </div>
+
     </ContainerHome>
   );
 }

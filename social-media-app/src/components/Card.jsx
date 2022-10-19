@@ -5,7 +5,8 @@ function PostCard(props) {
   return (
     <div>
       <div className=" w-full h-full flex justify-center  ">
-        <div className="flex bg-white shadow-lg rounded-md w-full h-auto">
+        <div className="flex bg-white shadow-lg rounded-md w-full h-auto md:mx-auto max-w-md md:max-w-2xl ">
+
           <div className="flex items-start px-4 py-6">
             <img
               className="w-12 h-12 rounded-full object-cover mr-4 shadow"
@@ -14,7 +15,9 @@ function PostCard(props) {
             />
             <div className="">
               <div className="flex items-center justify-between">
+
                 <h2 className="text-lg font-semibold text-gray-900 -mt-1">Rizal Susmiyanto </h2>
+
                 <div>
                   <label>
                     <svg
@@ -42,18 +45,22 @@ function PostCard(props) {
                 minus rem dolor sit amet!Lorem ipsum, dolor sit amet conse. Saepe optio minus rem
                 dolor sit amet!
               </p>
-              <div className="mt-4 flex items-center  p-2 border-2 rounded-md p ">
+
+              <div className="mt-4 flex items-center rounded-md bg-background-color ">
+
                 <input
-                  className="  text-white"
+                  className="w-full px-2 py-3 bg-background-color text-black rounded-lg text-sm focus:bg-white focus:outline-1 focus:outline-background-color "
                   type="text"
                   class="form-control"
                   name=""
                   id=""
                   aria-describedby="helpId"
-                  placeholder=" Beri Tanggapan ...."
+                  placeholder=" Beri Tanggapan . . ."
                 />
               </div>
+
               <CommentCard />
+
               <div className="flex justify-end pt-2">
                 <button
                   class="bg-zinc-700 text-white active:bg-neutral-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
@@ -123,7 +130,9 @@ function FormPost(props) {
                   name=""
                   id=""
                   placeholder="Ketikan sesuatu . . ."
-                  className="w-11/12 h-72 p-3 rounded-lg bg-background-color hover:outline-none focus:outline-none text-black"
+
+                  className="w-11/12 h-72 p-3 rounded-lg bg-background-color hover:outline-1 focus:outline-1 focus:bg-white focus:outline-background-color text-black"
+
                 ></textarea>
 
                 <button type="submit" hidden>
@@ -162,7 +171,14 @@ function FormPost(props) {
                         d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
                       />
                     </svg>
-                    <input type="file" hidden onChange={addImagePost} ref={filepickerRef} />
+
+                    <input
+                      type="file"
+                      hidden
+                      onChange={addImagePost}
+                      ref={filepickerRef}
+                    />
+
                   </button>
                   <button onClick={() => filepickerRef.current.click()}>
                     <svg
