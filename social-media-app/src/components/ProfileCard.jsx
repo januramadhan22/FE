@@ -18,15 +18,15 @@ const ProfileCard = (props) => {
               className="text-black md:ml-7 ml-5 text-sm md:text-xl font-semibold mt-4 md:mt-7"
               style={{ color: "#219EBC" }}
             >
-              <label htmlFor="my-modal-3" className="cursor-pointer">
+              <label htmlFor="my-modal-A" className="cursor-pointer">
                 Edit Profile
               </label>
             </p>
-            <input type="checkbox" id="my-modal-3" className="modal-toggle" />
+            <input type="checkbox" id="my-modal-A" className="modal-toggle" />
             <div className="modal">
               <div className="modal-box relative bg-white p-0 shadow-lg">
                 <label
-                  htmlFor="my-modal-3"
+                  htmlFor="my-modal-A"
                   className="btn border border-white hover:bg-white  hover:border-white  bg-transparent absolute right-2 top-2"
                   style={{ color: "black" }}
                 >

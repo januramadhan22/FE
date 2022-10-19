@@ -8,9 +8,24 @@ const EditCard = (props) => {
       <p className="text-black font-bold text-xl md:text-3xl md:ml-5 md:mt-4">Edit Profile</p>
 
       <div className="flex items-center justify-center md:gap-7 md:text-lg mt-10">
-        <p className="text-black   font-semibold" style={{ color: "#219EBC" }}>
+        {/* <p className="text-black   font-semibold" style={{ color: "#219EBC" }}>
           Ubah Foto
-        </p>
+        </p> */}
+
+        <label
+          className="text-black cursor-pointer font-semibold "
+          style={{ color: "#219EBC" }}
+          for="pic"
+        >
+          Ubah Foto
+        </label>
+        <input
+          // class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="pic"
+          type="file"
+          className="w-0 cursor-pointer"
+          style={{ backgroundColor: " #E7ECEF" }}
+        />
         <img
           className="w-32 h-32  md:w-32 md:h-32  rounded-full"
           src="https://t-2.tstatic.net/tribunnewswiki/foto/bank/images/clairo.jpg"
@@ -18,7 +33,7 @@ const EditCard = (props) => {
         />
 
         <div>
-          <p className="text-black  font-semibold " style={{ color: "#219EBC" }}>
+          <p className="text-black md:ml-4 font-semibold " style={{ color: "#219EBC" }}>
             Hapus Foto
           </p>
         </div>

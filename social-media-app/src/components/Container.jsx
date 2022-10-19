@@ -42,9 +42,7 @@ function ContainerHome({ children }) {
             >
               <div className="card-body">
                 <span className="flex justify-between items-baseline">
-                  <p className="font-bold text-lg text-sosmed-primary-color-dark">
-                    Notification
-                  </p>
+                  <p className="font-bold text-lg text-sosmed-primary-color-dark">Notification</p>
                   <button className="text-sosmed-secondary-color hover:text-sosmed-primary-color-dark">
                     Clear all
                   </button>
@@ -83,16 +81,11 @@ function ContainerHome({ children }) {
               >
                 ✕
               </label>
-              <h3 className="text-xl font-bold  text-sosmed-primary-color-dark">
-                Notification
-              </h3>
+              <h3 className="text-xl font-bold  text-sosmed-primary-color-dark">Notification</h3>
               <ul>
                 <li className="py-4 flex items-center justify-between">
                   <div className="w-12 rounded-full">
-                    <img
-                      className="rounded-full"
-                      src="https://placeimg.com/80/80/people"
-                    />
+                    <img className="rounded-full" src="https://placeimg.com/80/80/people" />
                   </div>
                   <a className="w-80  text-black">
                     <strong>Username</strong> telah mengomentari postingan anda
@@ -103,10 +96,7 @@ function ContainerHome({ children }) {
                 </li>
                 <li className="py-4 flex items-center justify-between">
                   <div className="w-12 rounded-full">
-                    <img
-                      className="rounded-full"
-                      src="https://placeimg.com/80/80/people"
-                    />
+                    <img className="rounded-full" src="https://placeimg.com/80/80/people" />
                   </div>
                   <a className="w-80  text-black">
                     <strong>Username</strong> telah mengomentari postingan anda
@@ -160,7 +150,7 @@ function ContainerHome({ children }) {
           </div>
         </div>
       </div>
-      <div>{children}</div>
+      <div className=" h-full md:mb-56">{children}</div>
     </div>
   );
 }
@@ -187,14 +177,10 @@ function ContainerLogin({ children }) {
             >
               ✕
             </label>
-            <h3 className="text-3xl font-extrabold text-sosmed-primary-color-dark">
-              Login
-            </h3>
+            <h3 className="text-3xl font-extrabold text-sosmed-primary-color-dark">Login</h3>
             <form action="" className="mt-10 flex flex-col gap-6">
               <div>
-                <p className="font-bold text-lg text-sosmed-primary-color-dark">
-                  Username
-                </p>
+                <p className="font-bold text-lg text-sosmed-primary-color-dark">Username</p>
                 <input
                   type="text"
                   placeholder="Masukan username"
@@ -202,9 +188,7 @@ function ContainerLogin({ children }) {
                 />
               </div>
               <div>
-                <p className="font-bold text-lg text-sosmed-primary-color-dark">
-                  Password
-                </p>
+                <p className="font-bold text-lg text-sosmed-primary-color-dark">Password</p>
                 <input
                   type="password"
                   placeholder="Masukan password"
@@ -236,14 +220,10 @@ function ContainerLogin({ children }) {
               >
                 ✕
               </label>
-              <h3 className="text-3xl font-extrabold text-sosmed-primary-color-dark">
-                Sign Up
-              </h3>
+              <h3 className="text-3xl font-extrabold text-sosmed-primary-color-dark">Sign Up</h3>
               <form action="" className="mt-10 flex flex-col gap-6">
                 <div>
-                  <p className="font-bold text-lg text-sosmed-primary-color-dark">
-                    Username
-                  </p>
+                  <p className="font-bold text-lg text-sosmed-primary-color-dark">Username</p>
                   <input
                     type="text"
                     placeholder="Masukan username"
@@ -251,9 +231,7 @@ function ContainerLogin({ children }) {
                   />
                 </div>
                 <div>
-                  <p className="font-bold text-lg text-sosmed-primary-color-dark">
-                    Email
-                  </p>
+                  <p className="font-bold text-lg text-sosmed-primary-color-dark">Email</p>
                   <input
                     type="email"
                     placeholder="Masukan email"
@@ -261,9 +239,7 @@ function ContainerLogin({ children }) {
                   />
                 </div>
                 <div>
-                  <p className="font-bold text-lg text-sosmed-primary-color-dark">
-                    Password
-                  </p>
+                  <p className="font-bold text-lg text-sosmed-primary-color-dark">Password</p>
                   <input
                     type="password"
                     placeholder="Masukan password"
@@ -289,7 +265,7 @@ function ContainerLogin({ children }) {
           </label>
         </div>
       </div>
-      <div>{children}</div>
+      <div className="h-screen">{children}</div>
     </div>
   );
 }
