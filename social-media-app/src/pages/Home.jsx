@@ -7,7 +7,6 @@ function Home() {
     <ContainerHome>
       <FormPost />
       <PostCard />
-      <PostCard />
     </ContainerHome>
   );
 }
