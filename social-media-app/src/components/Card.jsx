@@ -2,6 +2,62 @@ import React, { useRef, useState } from "react";
 
 function Card(props) {
   return (
+
+    <div>
+      <div className=" w-full h-full flex justify-center mb-8 ">
+        <div className="flex h-full bg-white shadow-lg rounded-md mx-4 md:mx-auto max-w-md md:max-w-2xl ">
+          <div className="flex items-start px-4 py-6">
+            <img
+              className="w-12 h-12 rounded-full object-cover mr-4 shadow"
+              src="https://placeimg.com/80/80/people"
+              alt="avatar"
+            />
+            <div className="">
+              <div className="flex items-center justify-between">
+                <h2 className="text-lg font-semibold text-gray-900 -mt-1">
+                  Rizal Susmiyanto{" "}
+                </h2>
+                <div>
+                  <label>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+                      />
+                    </svg>
+                  </label>
+                </div>
+              </div>
+              <p className="mt-3 text-gray-700 text-sm">
+                Lorem ipsum, dolor sit amet conse. Saepe optio minus rem dolor
+                sit amet!Lorem ipsum, dolor sit amet conse. Saepe optio minus
+                rem dolor sit amet!Lorem ipsum, dolor sit amet conse. Saepe
+                optio minus rem dolor sit amet!Lorem ipsum, dolor sit amet
+                conse. Saepe optio minus rem dolor sit amet!Lorem ipsum, dolor
+                sit amet conse. Saepe optio minus rem dolor sit amet!Lorem
+                ipsum, dolor sit amet conse. Saepe optio minus rem dolor sit
+                amet!
+              </p>
+              <div className="mt-4 flex items-center  p-2 border-2 rounded-md p ">
+                <input
+                  className="  text-white"
+                  type="text"
+                  class="form-control"
+                  name=""
+                  id=""
+                  aria-describedby="helpId"
+                  placeholder=" Beri Tanggapan ...."
+                />
+              </div>
+
     <div className="h-screen ">
       <div className="flex bg-white shadow-lg rounded-md mx-4 md:mx-auto my-56 max-w-md md:max-w-2xl ">
         <div className="flex items-start px-4 py-6">
@@ -37,6 +93,7 @@ function Card(props) {
               />
             </div>
 
+
             {/* User Commnet */}
             <div className="flex items-start pt-4">
               <img
@@ -48,6 +105,8 @@ function Card(props) {
                 <div className="flex items-center justify-between pt-2">
                   <h2 className="text-lg font-semibold text-gray-900 -mt-1 ">Keren </h2>
                 </div>
+
+
                 <p className="mt-3 text-gray-700 text-sm pb-1">
                   Lorem ipsum, dolor sit amet conse. Saepe optio minus rem dolor sit{" "}
                 </p>
@@ -143,14 +202,20 @@ function Card(props) {
                     dolor sit{" "}
                   </p>
                 </div>
+
               </div>
               <div className="flex justify-end pt-2">
                 <button
                   class="bg-zinc-700 text-white active:bg-neutral-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                   type="button"
                 >
+
+                  More Commentar
+                </button>
+
                   More Comentar
                 </button>
+
 
               </div>
             </div>
