@@ -3,13 +3,13 @@ import ReactDOM from "react-dom/client";
 import "./styles/App.css";
 // import App from "./components/ProfileCard";
 // import App from "./components/EditModal";
-import App from "./pages/UserProfile";
-import Home from "./pages/Home";
-import SosmedApp from "./pages";
+// import App from "./pages/UserProfile";
+// import App from "./pages/Home";
+import App from "./routes";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Home />
+    <App />
   </React.StrictMode>
 );

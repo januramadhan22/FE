@@ -8,28 +8,11 @@ import { PostCard } from "../components/Card";
 export default function UserProfile() {
   return (
     <ContainerHome>
-      <div className=" w-full flex justify-center md:mt-16 ">
-        {/* <div className="bg-zinc-500 w-full md:mx-96 ">
-
-          <div className="tabs  w-full h-fit  bg-slate-500 flex justify-around  ">
-            <a
-              className="tab tab-bordered text-white"
-              data-toggle="tab"
-              href="../components/ProfileCard"
-            >
-              <p> Posts</p>
-            </a>
-            <a className="tab tab-bordered tab-active text-white ">
-              <p>About Me</p>
-            </a>
-            <a className="tab tab-bordered">Media</a>
-          </div>
-        </div> */}
+      <div className=" w-full flex justify-center md:mt-16 mb-9 ">
         <div className="inline-block  w-full mt-7 md:mt-11 mx-10 h-full  md:mx-96">
           <div className="h-3/5">
             <ProfileCard />
           </div>
-
           <Tab.Group>
             <Tab.List
               className={
@@ -55,12 +38,16 @@ export default function UserProfile() {
 
             <Tab.Panels className={"mt-5 h-full"}>
               <Tab.Panel>
-                <div className="bg-blue-500 w-fit h-3">
+
+                <div className="h-96">
+
                   <PostCard />
                 </div>
               </Tab.Panel>
               <Tab.Panel>
-                <BioCard />
+                <div className="h-96">
+                  <BioCard />
+                </div>
               </Tab.Panel>
             </Tab.Panels>
           </Tab.Group>

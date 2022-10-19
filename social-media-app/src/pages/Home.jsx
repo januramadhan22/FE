@@ -5,8 +5,11 @@ import { PostCard, FormPost } from "../components/Card";
 function Home() {
   return (
     <ContainerHome>
-      <FormPost />
-      <PostCard />
+      <div className="md:mx-96 mx-40 md:h-full">
+        <FormPost />
+        <PostCard />
+      </div>
+
     </ContainerHome>
   );
 }
