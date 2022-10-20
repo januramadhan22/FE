@@ -4,8 +4,10 @@ import ProfileCard from "../components/ProfileCard";
 import { Tab } from "@headlessui/react";
 import BioCard from "../components/AboutMe";
 import { PostCard } from "../components/Card";
+import { useTitle } from "../utils/hooks/useTitle";
 
 export default function UserProfile() {
+  useTitle("Username Profile");
   return (
     <ContainerHome>
       <div className=" w-full flex justify-center md:mt-16 mb-9 ">
@@ -38,9 +40,7 @@ export default function UserProfile() {
 
             <Tab.Panels className={"mt-5 h-full"}>
               <Tab.Panel>
-
                 <div className="h-96">
-
                   <PostCard />
                 </div>
               </Tab.Panel>
