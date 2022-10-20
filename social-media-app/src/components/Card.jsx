@@ -81,7 +81,7 @@ function PostCard({ owner, content, comment }) {
   );
 }
 
-function FormPost({ owner }) {
+function FormPost({ username }) {
   const inputRef = useRef(null);
   const filepickerRef = useRef(null);
   const [imagePost, setImagePost] = useState(null);
@@ -90,6 +90,8 @@ function FormPost({ owner }) {
     e.preventDefault();
 
     if (!inputRef.current.value) return;
+
+    inputRef.current.value = "";
   };
 
   const addImagePost = (e) => {
@@ -119,7 +121,7 @@ function FormPost({ owner }) {
             htmlFor="my-modal-4"
             className="w-full h-full flex items-center p-2 rounded-lg bg-background-color cursor-pointer"
           >
-            Sampaikan Sesuatu, {owner} . . .
+            Sampaikan Sesuatu, {username} . . .
           </label>
           <input type="checkbox" id="my-modal-4" className="modal-toggle" />
           <label htmlFor="my-modal-4" className="modal">
@@ -136,7 +138,7 @@ function FormPost({ owner }) {
                 alt="avatar"
               />
               <div className="w-full space-y-4">
-                <h3 className="text-lg font-bold text-black">{owner}</h3>
+                <h3 className="text-lg font-bold text-black">{username}</h3>
                 <textarea
                   name=""
                   id=""

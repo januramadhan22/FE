@@ -139,7 +139,9 @@ function ContainerHome({ children }) {
               className="menu menu-compact w-40 dropdown-content p-2 rounded-box border bg-white shadow-lg text-sosmed-primary-color-dark"
             >
               <li>
-                <Link to="/profile">
+
+                <Link to="/profile/:id_user">
+
                   <a>My Profile</a>
                 </Link>
               </li>
