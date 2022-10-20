@@ -43,9 +43,7 @@ function ContainerHome({ children }) {
             >
               <div className="card-body">
                 <span className="flex justify-between items-baseline">
-                  <p className="font-bold text-lg text-sosmed-primary-color-dark">
-                    Notification
-                  </p>
+                  <p className="font-bold text-lg text-sosmed-primary-color-dark">Notification</p>
                   <button className="text-sosmed-secondary-color hover:text-sosmed-primary-color-dark">
                     Clear all
                   </button>
@@ -84,16 +82,11 @@ function ContainerHome({ children }) {
               >
                 ✕
               </label>
-              <h3 className="text-xl font-bold  text-sosmed-primary-color-dark">
-                Notification
-              </h3>
+              <h3 className="text-xl font-bold  text-sosmed-primary-color-dark">Notification</h3>
               <ul>
                 <li className="py-4 flex items-center justify-between">
                   <div className="w-12 rounded-full">
-                    <img
-                      className="rounded-full"
-                      src="https://placeimg.com/80/80/people"
-                    />
+                    <img className="rounded-full" src="https://placeimg.com/80/80/people" />
                   </div>
                   <a className="w-80  text-black">
                     <strong>Username</strong> telah mengomentari postingan anda
@@ -104,10 +97,7 @@ function ContainerHome({ children }) {
                 </li>
                 <li className="py-4 flex items-center justify-between">
                   <div className="w-12 rounded-full">
-                    <img
-                      className="rounded-full"
-                      src="https://placeimg.com/80/80/people"
-                    />
+                    <img className="rounded-full" src="https://placeimg.com/80/80/people" />
                   </div>
                   <a className="w-80  text-black">
                     <strong>Username</strong> telah mengomentari postingan anda
@@ -149,7 +139,9 @@ function ContainerHome({ children }) {
               className="menu menu-compact w-40 dropdown-content p-2 rounded-box border bg-white shadow-lg text-sosmed-primary-color-dark"
             >
               <li>
+
                 <Link to="/profile/:id_user">
+
                   <a>My Profile</a>
                 </Link>
               </li>
@@ -171,9 +163,11 @@ function ContainerLogin({ children }) {
   return (
     <div className="w-full h-full flex flex-col justify-center gap-16 bg-background-color font-inter">
       <div className="navbar flex justify-between bg-white shadow-md">
-        <a className="btn btn-ghost normal-case text-xl font-bold text-sosmed-secondary-color">
-          Sosmed App
-        </a>
+        <Link to="/profile/:id_user">
+          <a className="btn btn-ghost normal-case text-xl font-bold text-sosmed-secondary-color">
+            Sosmed App
+          </a>
+        </Link>
         <label
           htmlFor="my-modal-3"
           className="px-6 py-1 border-2 rounded-md border-sosmed-secondary-color font-semibold text-sosmed-secondary-color hover:bg-sosmed-secondary-color hover:text-white mr-6 cursor-pointer"
@@ -189,14 +183,10 @@ function ContainerLogin({ children }) {
             >
               ✕
             </label>
-            <h3 className="text-3xl font-extrabold text-sosmed-primary-color-dark">
-              Login
-            </h3>
+            <h3 className="text-3xl font-extrabold text-sosmed-primary-color-dark">Login</h3>
             <form action="" className="mt-10 flex flex-col gap-6">
               <div>
-                <p className="font-bold text-lg text-sosmed-primary-color-dark">
-                  Username
-                </p>
+                <p className="font-bold text-lg text-sosmed-primary-color-dark">Username</p>
                 <input
                   type="text"
                   placeholder="Masukan username"
@@ -204,9 +194,7 @@ function ContainerLogin({ children }) {
                 />
               </div>
               <div>
-                <p className="font-bold text-lg text-sosmed-primary-color-dark">
-                  Password
-                </p>
+                <p className="font-bold text-lg text-sosmed-primary-color-dark">Password</p>
                 <input
                   type="password"
                   placeholder="Masukan password"
@@ -224,7 +212,7 @@ function ContainerLogin({ children }) {
               </label>
             </div>
             <div className="w-full flex justify-center">
-              <Link to="/Home">
+              <Link to="/home">
                 <button className="px-36 py-1 rounded-lg bg-sosmed-secondary-color text-2xl font-bold text-white border-2 border-sosmed-secondary-color hover:text-sosmed-secondary-color hover:bg-white">
                   Login
                 </button>
@@ -240,14 +228,10 @@ function ContainerLogin({ children }) {
               >
                 ✕
               </label>
-              <h3 className="text-3xl font-extrabold text-sosmed-primary-color-dark">
-                Sign Up
-              </h3>
+              <h3 className="text-3xl font-extrabold text-sosmed-primary-color-dark">Sign Up</h3>
               <form action="" className="mt-10 flex flex-col gap-6">
                 <div>
-                  <p className="font-bold text-lg text-sosmed-primary-color-dark">
-                    Username
-                  </p>
+                  <p className="font-bold text-lg text-sosmed-primary-color-dark">Username</p>
                   <input
                     type="text"
                     placeholder="Masukan username"
@@ -255,9 +239,7 @@ function ContainerLogin({ children }) {
                   />
                 </div>
                 <div>
-                  <p className="font-bold text-lg text-sosmed-primary-color-dark">
-                    Email
-                  </p>
+                  <p className="font-bold text-lg text-sosmed-primary-color-dark">Email</p>
                   <input
                     type="email"
                     placeholder="Masukan email"
@@ -265,9 +247,7 @@ function ContainerLogin({ children }) {
                   />
                 </div>
                 <div>
-                  <p className="font-bold text-lg text-sosmed-primary-color-dark">
-                    Password
-                  </p>
+                  <p className="font-bold text-lg text-sosmed-primary-color-dark">Password</p>
                   <input
                     type="password"
                     placeholder="Masukan password"

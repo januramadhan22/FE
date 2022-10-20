@@ -14,9 +14,7 @@ function PostCard({ owner, content, comment }) {
             />
             <div className="w-full">
               <div className="flex items-center justify-between">
-                <h2 className="text-lg font-semibold text-gray-900 -mt-1">
-                  {owner}
-                </h2>
+                <h2 className="text-lg font-semibold text-gray-900 -mt-1">{owner}</h2>
                 <div>
                   <label>
                     <svg
@@ -50,10 +48,7 @@ function PostCard({ owner, content, comment }) {
 
               {comment &&
                 comment.map((item, i) => (
-                  <div
-                    key={item.id_comment}
-                    className="w-full flex items-start pt-8"
-                  >
+                  <div key={item.id_comment} className="w-full flex items-start pt-8">
                     <img
                       className="w-12 h-12 rounded-full object-cover mr-4 shadow"
                       src="https://placeimg.com/80/80/people"
@@ -65,9 +60,7 @@ function PostCard({ owner, content, comment }) {
                           {item.username}
                         </h2>
                       </div>
-                      <p className="mt-3 text-gray-700 text-sm pb-1">
-                        {item.content}
-                      </p>
+                      <p className="mt-3 text-gray-700 text-sm pb-1">{item.content}</p>
                     </div>
                   </div>
                 ))}
@@ -132,10 +125,7 @@ function FormPost({ username }) {
           </label>
           <input type="checkbox" id="my-modal-4" className="modal-toggle" />
           <label htmlFor="my-modal-4" className="modal">
-            <label
-              className="modal-box relative flex bg-white shadow-lg"
-              for=""
-            >
+            <label className="modal-box relative flex bg-white shadow-lg" for="">
               <label
                 htmlFor="my-modal-4"
                 className="btn btn-sm btn-circle bg-transparent border-none text-sosmed-primary-color-dark text-lg font-bold hover:bg-white hover:text-sosmed-secondary-color absolute right-2 top-2"
@@ -194,12 +184,7 @@ function FormPost({ username }) {
                       />
                     </svg>
 
-                    <input
-                      type="file"
-                      hidden
-                      onChange={addImagePost}
-                      ref={filepickerRef}
-                    />
+                    <input type="file" hidden onChange={addImagePost} ref={filepickerRef} />
                   </button>
                   <button onClick={() => filepickerRef.current.click()}>
                     <svg
