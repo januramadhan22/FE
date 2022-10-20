@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 
 import { ContainerLogin } from "../components/Container";
@@ -12,8 +12,7 @@ function SosmedApp() {
   useTitle("Sosmed App");
   const navigate = useNavigate();
   const [posts, setPosts] = useState([]);
-  const API =
-    "https://virtserver.swaggerhub.com/aziz-wahyudin/Social-Media-Apps/1.0.0/posts";
+  const API = "https://virtserver.swaggerhub.com/aziz-wahyudin/Social-Media-Apps/1.0.0/posts";
 
   useEffect(() => {
     getPosts();
