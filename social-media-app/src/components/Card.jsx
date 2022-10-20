@@ -6,7 +6,6 @@ function PostCard(props) {
     <div>
       <div className=" w-full h-full flex justify-center  ">
         <div className="flex bg-white shadow-lg rounded-md w-full h-auto md:mx-auto max-w-md md:max-w-2xl ">
-
           <div className="flex items-start px-4 py-6">
             <img
               className="w-12 h-12 rounded-full object-cover mr-4 shadow"
@@ -15,8 +14,9 @@ function PostCard(props) {
             />
             <div className="">
               <div className="flex items-center justify-between">
-
-                <h2 className="text-lg font-semibold text-gray-900 -mt-1">Rizal Susmiyanto </h2>
+                <h2 className="text-lg font-semibold text-gray-900 -mt-1">
+                  Rizal Susmiyanto{" "}
+                </h2>
 
                 <div>
                   <label>
@@ -38,16 +38,17 @@ function PostCard(props) {
                 </div>
               </div>
               <p className="mt-3 text-gray-700 text-sm">
-                Lorem ipsum, dolor sit amet conse. Saepe optio minus rem dolor sit amet!Lorem ipsum,
-                dolor sit amet conse. Saepe optio minus rem dolor sit amet!Lorem ipsum, dolor sit
-                amet conse. Saepe optio minus rem dolor sit amet!Lorem ipsum, dolor sit amet conse.
-                Saepe optio minus rem dolor sit amet!Lorem ipsum, dolor sit amet conse. Saepe optio
-                minus rem dolor sit amet!Lorem ipsum, dolor sit amet conse. Saepe optio minus rem
-                dolor sit amet!
+                Lorem ipsum, dolor sit amet conse. Saepe optio minus rem dolor
+                sit amet!Lorem ipsum, dolor sit amet conse. Saepe optio minus
+                rem dolor sit amet!Lorem ipsum, dolor sit amet conse. Saepe
+                optio minus rem dolor sit amet!Lorem ipsum, dolor sit amet
+                conse. Saepe optio minus rem dolor sit amet!Lorem ipsum, dolor
+                sit amet conse. Saepe optio minus rem dolor sit amet!Lorem
+                ipsum, dolor sit amet conse. Saepe optio minus rem dolor sit
+                amet!
               </p>
 
               <div className="mt-4 flex items-center rounded-md bg-background-color ">
-
                 <input
                   className="w-full px-2 py-3 bg-background-color text-black rounded-lg text-sm focus:bg-white focus:outline-1 focus:outline-background-color "
                   type="text"
@@ -78,8 +79,15 @@ function PostCard(props) {
 }
 
 function FormPost(props) {
+  const inputRef = useRef(null);
   const filepickerRef = useRef(null);
   const [imagePost, setImagePost] = useState(null);
+
+  const sendPost = (e) => {
+    e.preventDefault();
+
+    if (!inputRef.current.value) return;
+  };
 
   const addImagePost = (e) => {
     const reader = new FileReader();
@@ -112,7 +120,10 @@ function FormPost(props) {
           </label>
           <input type="checkbox" id="my-modal-4" className="modal-toggle" />
           <label htmlFor="my-modal-4" className="modal">
-            <label className="modal-box relative flex bg-white shadow-lg" for="">
+            <label
+              className="modal-box relative flex bg-white shadow-lg"
+              for=""
+            >
               <label
                 htmlFor="my-modal-4"
                 className="btn btn-sm btn-circle bg-transparent border-none text-sosmed-primary-color-dark text-lg font-bold hover:bg-white hover:text-sosmed-secondary-color absolute right-2 top-2"
@@ -129,10 +140,9 @@ function FormPost(props) {
                 <textarea
                   name=""
                   id=""
+                  ref={inputRef}
                   placeholder="Ketikan sesuatu . . ."
-
                   className="w-11/12 h-72 p-3 rounded-lg bg-background-color hover:outline-1 focus:outline-1 focus:bg-white focus:outline-background-color text-black"
-
                 ></textarea>
 
                 <button type="submit" hidden>
@@ -178,7 +188,6 @@ function FormPost(props) {
                       onChange={addImagePost}
                       ref={filepickerRef}
                     />
-
                   </button>
                   <button onClick={() => filepickerRef.current.click()}>
                     <svg
@@ -196,7 +205,11 @@ function FormPost(props) {
                       />
                     </svg>
                   </button>
-                  <button className="w-full p-2 rounded-br-2xl font-bold text-white border-2 border-sosmed-secondary-color bg-sosmed-secondary-color hover:text-sosmed-secondary-color hover:bg-white">
+                  <button
+                    onClick={sendPost}
+                    type="submit"
+                    className="w-full p-2 rounded-br-2xl font-bold text-white border-2 border-sosmed-secondary-color bg-sosmed-secondary-color hover:text-sosmed-secondary-color hover:bg-white"
+                  >
                     Share
                   </button>
                 </div>
